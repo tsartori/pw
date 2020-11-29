@@ -2,7 +2,6 @@
 
 class Contact extends Controller {
 
-   
     // Index of the home page (localhost/home(/index))
     public function index($param1= '', $param2= '', $param3= '') {
         
@@ -28,8 +27,8 @@ class Contact extends Controller {
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
         $aluno = $this->model('Alunos');
-       if($aluno->createAluno([$nome,$idade]))
-       echo "cadastro executado com sucesso!!";
+        if($aluno->createAluno([$nome,$idade]))
+        echo "cadastro executado com sucesso!!";
     }
     public function alteraAluno(){
         $id = $_POST["id"];
@@ -37,8 +36,8 @@ class Contact extends Controller {
         $idade = $_POST["idade"];
 
         $aluno = $this->model('Alunos');
-       if($aluno->alterAluno([$nome,$idade,$id]))
-       echo "cadastro alterado com sucesso!!";
+        if($aluno->alterAluno([$nome,$idade,$id]))
+        echo "cadastro alterado com sucesso!!";
     }
 
     public function  formAlter($param1= '', $param2= '', $param3= ''){
@@ -49,8 +48,8 @@ class Contact extends Controller {
     public function deleteAluno($param1= '', $param2= '', $param3= ''){
         $id = $param2;
         $aluno = $this->model('Alunos');
-       if($aluno->deleteAluno([$id]))
-       echo "cadastro excluido com sucesso!!";
+        if($aluno->deleteAluno([$id]))
+        echo "cadastro excluido com sucesso!!";
         
     }
 }
